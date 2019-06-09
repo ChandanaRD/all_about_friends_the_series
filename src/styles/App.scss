@@ -1,0 +1,56 @@
+.App {
+  text-align: center;
+  background-image: url(../images/Friends-logo-wallpaper.jpg);
+  // background-repeat: space;
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+  min-height: 100vh;
+
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 2s linear;
+  height: 40vmin;
+  pointer-events: none;
+  border-radius: 5px;
+}
+
+.App-header {
+  /* background-color: #282c34; */
+  // background-color: white;
+  min-height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  // font-size: calc(10px + 2vmin);
+  position: relative;
+  top: 500px;
+  color: white;
+  background-color: black;
+
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(-1deg);
+  }
+  to {
+    transform: rotate(1deg);
+  }
+  /* from {
+    transform: rotate(7deg);
+  }
+  to {
+    transform: rotate(-7deg);
+  } */
+}
+
+.intro{
+  margin-top:20px;
+}
