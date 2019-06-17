@@ -1,16 +1,31 @@
+@import "common.scss";
+
 .charactersWrapper{
     top: calc(50% - 200px);
     align-items: center;
     display: flex;
     justify-content: center;
+    min-height: 90vh;
     .character{
-        padding: 20px;
-        margin: 20px;
-        border: 5px solid blue;
+        position: relative;
+        top: 50%;
+        margin-top: -250px;
+        margin: -250px 20px 20px 20px;
         display: flex;
+        flex-direction: column;
         .characterImage{
-            width: 120px;
-            height: 150px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 5px solid blue;
+            width: 160px;
+            height: 190px;
+        }
+        .characterText{
+            padding: 5px;
+            color: black;
+            font-weight: 400;
+            text-align: center;
+            font-size: 18px;
         }
     }
 }

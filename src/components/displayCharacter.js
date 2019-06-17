@@ -1,40 +1,157 @@
 import React from 'react';
 import "../styles/display.scss";
+import {Link} from "react-router-dom";
+// import "../styles/common.scss";
 // import ReactDom from "react-dom";
 // import * as serviceWorker from '../serviceworker';
 // import welcomePage from  '../mainPage';
 
-class displayCharacter extends React.Component{
-    constructor(props){
+class displayCharacter extends React.Component {
+    constructor(props) {
         super(props);
-    console.log("x: " +this.props.positionx+"y: "+this.props.positiony)
-        console.log("x: "+ this.props.positionx + "y: " + this.props.positiony)
-        
+        console.log(this.props);
+
         this.state = {
-            "randomMsg" : "hey!"
+            character: this.props.match.params.character,
+            showCompTemp: false,
+            componentPosition:
+            {
+                left: '0 px',
+                top: '0 px'
+            }
         }
-    }
-    randomMsgArray = ["you go girl!", "how You doing?", "chandelior", "Mr. bing!", "My lobster!"];
-    componentPosition = {left: this.props.positionx,
-    right:this.props.positiony}
-    generateRandomMsg() {
-        console.log("x: "+ this.props.positionx + "y: " + this.props.positiony)
+        console.log("this.props.match.params.character"+this.props.match.params.character);
 
-        var randomIndex = Math.floor(Math.random()*this.randomMsgArray.length);
+        this.getPosition = this.getPosition.bind(this);
+    }
+    characters=[
+        "MonicaGeller", "RossGeller", "RachelGreen", "JoeyTribbiani", "PhoebeBuffay", "ChandlerBing"
+    ];
+    randomMsgArray = {
+        "MonicaGeller" : [
+            "let's do it!",
+            "that's my favourite kinda competition!",
+            "you're fired!",
+            "I'm always the host!",
+            "I know I know I know!"
+        ],
+        "RossGeller" : [
+            "missisipi 1, missisipi 2 ...",
+            "we were on a break!",
+            "unagi!",
+            "keynote speaker",
+            "hey! that's my burger!"
+        ],
+        "RachelGreen" : [
+            "Monica, will you stop calling it a 'flower'?"
+        ],
+        "JoeyTribbiani" : [
+            "how you doing?",
+            "Joey doesn't share food!",
+            "soap opera",
+            "i'm your best friend!"
+        ],
+        "PhoebeBuffay" : [
+            "smelly cat, smelly cat! what are the feeding you?",
+            "meet Mr.Rob",
+            "uh-huh uh-huh",
+            "ross, i don't buy ur words",
+            "Janet is your lobster, chandler! "
+        ],
+        "ChandlerBing" : [
+            "Mr. bing!"
+        ]
+    }
+        // "you go girl!", "how You doing?", "chandelior", "Mr. bing!", "My lobster!"};
+    // componentPosition = {
+    //     left: this.props.positionx,
+    //     right: this.props.positiony
+    // }
+    getPosition(e){
+        this.setState({
+            showCompTemp: true,
+            componentPosition : {
+                left : e.screenX,
+                top : e.screenY - 100
+            }
+        })
+        console.log("this.state.componentPosition : " + JSON.stringify( this.state.componentPosition));
+        this.generateRandomMsg();
+    }
+    generateRandomMsg = () => {
+        var randomIndex = Math.floor(Math.random() * this.randomMsgArray[this.state.character].length);
         console.log(randomIndex);
-        return this.randomMsgArray[randomIndex];
+        return this.randomMsgArray[this.state.character][randomIndex];
     }
 
-    componentDidUpdate(){
-        console.log("x: "+ this.props.positionx + "y: " + this.props.positiony)
-        this.componentPosition = {left: this.props.positionx + "px",
-            top:this.props.positiony + "px"}
-    }
+    // displayFooter(){
+    //     var footer ="";
+    //     this.characters.forEach( character =>{
+    //         if(character !== this.state.character){
+    //             footer + " <Link to ='/displayCharacter:"+character+">"
+    //         }
+    //     })
+            
+        
+    // }
 
-    render(){
-        return ( <div className = "show" style={this.componentPosition}>
-            {this.generateRandomMsg()}
-        </div>)
+    // componentDidUpdate() {
+    //     console.log("x: " + this.props.positionx + "y: " + this.props.positiony)
+    //     this.componentPosition = {
+    //         left: this.props.positionx + "px",
+    //         top: this.props.positiony + "px"
+    //     }
+    // }
+
+    render() {
+        var imgString = "require(../images/"+this.state.character+".jpg)";
+        console.log(imgString);
+        return (<div className = "componentWrapper">
+            <header className = "displayHeader"> 
+                <p>
+                All about friends the series!
+                </p>
+            </header>
+            <div className="characterWrapper" onClick={this.getPosition.bind(this)}>
+            <div className="character">
+                <img className="characterImage" src={require("../images/"+this.state.character+".jpg")} alt={this.state.character}>
+                </img>
+                <p className="characterText">
+                    {this.state.character}
+                </p>
+            </div>
+            <div className="show" style={this.state.componentPosition}>
+                {this.generateRandomMsg()}
+            </div>
+        </div>
+        <footer className="displayFooter">
+            <p>
+                Monica Geller
+            </p>
+            <p>
+                Ross Geller
+            </p>
+            <p>
+                Joey Tribbiani
+            </p>
+            <p>
+                Phoebe Buffay
+            </p>
+            <p>
+                Rachel Green
+            </p>
+            <p>
+                Chandler Bing
+            </p>
+            <p>
+            <Link to="/chooseFavCharacter">
+                Back
+            </Link>
+            </p>
+        </footer>
+        </div>
+        
+        )
     }
 }
 
