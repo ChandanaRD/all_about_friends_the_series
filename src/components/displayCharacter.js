@@ -84,16 +84,18 @@ class displayCharacter extends React.Component {
         return this.randomMsgArray[this.state.character][randomIndex];
     }
 
-    // displayFooter(){
-    //     var footer ="";
-    //     this.characters.forEach( character =>{
-    //         if(character !== this.state.character){
-    //             footer + " <Link to ='/displayCharacter:"+character+">"
-    //         }
-    //     })
-            
-        
-    // }
+    displayFooter(character) {
+        if (character !== this.state.character) {
+            console.log(character);
+            return (
+                <a href={"/displayCharacter" + character} onClick={this.getPosition.bind(this)}>
+                    <p >
+                        {character}
+                    </p>
+                </a>
+            )
+        }
+    }
 
     // componentDidUpdate() {
     //     console.log("x: " + this.props.positionx + "y: " + this.props.positiony)
@@ -125,29 +127,22 @@ class displayCharacter extends React.Component {
             </div>
         </div>
         <footer className="displayFooter">
-            <p>
-                Monica Geller
-            </p>
-            <p>
-                Ross Geller
-            </p>
-            <p>
-                Joey Tribbiani
-            </p>
-            <p>
-                Phoebe Buffay
-            </p>
-            <p>
-                Rachel Green
-            </p>
-            <p>
-                Chandler Bing
-            </p>
-            <p>
-            <Link to="/chooseFavCharacter">
-                Back
+                {
+                    this.displayFooter("MonicaGeller")}
+                {
+                    this.displayFooter("RossGeller")}
+                {
+                    this.displayFooter("RachelGreen")}
+                {
+                    this.displayFooter("JoeyTribbiani")}
+                {
+                    this.displayFooter("PhoebeBuffay")}
+                {
+                    this.displayFooter("ChandlerBing")}
+                <Link to="/chooseFavCharacter">
+                    <p> Back
+                        </p>
             </Link>
-            </p>
         </footer>
         </div>
         
