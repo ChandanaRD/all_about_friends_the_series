@@ -21,7 +21,7 @@ class chooseFavCharacter extends React.Component {
                 </p>
             </header>
             <div className="charactersWrapper">
-
+            
                 <div className="character">
                     <Link to={"/displayCharacter" + this.characters[0]}>
                         <img src={require("../images/MonicaGeller.jpg")} alt="Monica geller" className="characterImage"></img>
@@ -60,37 +60,16 @@ class chooseFavCharacter extends React.Component {
                 </div>
             </div>
             <footer className="displayFooter">
-                <Link to={"/displayCharacter" + this.characters[0]}>
-                    <p>
-                        Monica Geller
-            </p>
-                </Link>
-                <Link to={"/displayCharacter" + this.characters[1]}>
-                    <p>
-                        Ross Geller
-            </p>
-                </Link>
-                <Link to={"/displayCharacter" + this.characters[2]}>
-
-                    <p>
-                        Rachel Green
-            </p>
-                </Link>
-                <Link to={"/displayCharacter" + this.characters[3]}>
-                    <p>
-                        Joey Tribbiani
-            </p>
-                </Link>
-                <Link to={"/displayCharacter" + this.characters[4]}>
-                    <p>
-                        Phoebe Buffay
-            </p>
-                </Link>
-                <Link to={"/displayCharacter" + this.characters[5]}>
-                    <p>
-                        Chandler Bing
-                    </p>
-                </Link>
+            {this.characters.map(character => {
+                        return (
+                            <Link to={"/displayCharacter" + character}>
+                                <p >
+                                    {character}
+                                </p>
+                            </Link>
+                        )
+                    }
+                )}
                 <p>
                     <Link to="/">
                         Back
