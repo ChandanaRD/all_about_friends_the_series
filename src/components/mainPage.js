@@ -1,5 +1,5 @@
 import React from 'react';
-// import logo from '../images/Friends-logo-wallpaper.jpg';
+import logo from '../images/Friends-logo-wallpaper.jpg';
 import '../styles/App.scss';
 import { Link } from 'react-router-dom'
 import DisplayCharacter from './displayCharacter';
@@ -37,7 +37,7 @@ class mainPage extends React.Component {
     return (
       <div className="App">
         <header className="App-header" onClick={this._onClickOfDiv.bind(this)}>
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          <img src={logo} className="App-logo" alt="logo" />
             <h1 className="intro">Welcome to "F.R.I.E.N.D.S" wall of dialogues! </h1>
           <Link to="/chooseFavCharacter">
             <h2 className="App-link">

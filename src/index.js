@@ -14,7 +14,7 @@ const componentRouter = (
           <Switch>
           <Route exact path="/" component={mainPage} />
         <Route path="/chooseFavCharacter" component={chooseFavCharacter} />
-        <Route path="/displayCharacter" component={displayCharacter} />
+        <Route path="/displayCharacter:character" component={displayCharacter} />
         <Route component={NotFound} />
           </Switch>
         
