@@ -41,8 +41,8 @@ $component-font : #282c34;
     border: 5px solid rgb(69, 12, 173);
     border-radius: 10px;
     position: absolute;
-    left: 200px;
-    top:200px;
+    left: calc(50% - 100px);
+    top:150px;
 }
 
 .hide{

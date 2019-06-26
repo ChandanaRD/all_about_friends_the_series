@@ -13,7 +13,7 @@ class displayCharacter extends React.Component {
 
         this.state = {
             character: this.props.match.params.character,
-            showCompTemp: false,
+            isComponentVisible: false,
             componentPosition:
             {
                 left: '0 px',
@@ -69,7 +69,7 @@ class displayCharacter extends React.Component {
     // }
     getPosition(e) {
         this.setState({
-            showCompTemp: true,
+            isComponentVisible: true,
             componentPosition: {
                 left: e.screenX,
                 top: e.screenY - 100
@@ -79,6 +79,9 @@ class displayCharacter extends React.Component {
         this.generateRandomMsg();
     }
     generateRandomMsg = () => {
+        if(!this.state.isComponentVisible){
+            return "Click anywhere on screen!";
+        }
         var randomIndex = Math.floor(Math.random() * this.randomMsgArray[this.state.character].length);
         console.log(randomIndex);
         return this.randomMsgArray[this.state.character][randomIndex];
