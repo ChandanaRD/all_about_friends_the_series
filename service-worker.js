@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/all_about_friends_the_series/precache-manifest.f6fead7877d2f30ba8593863ad451d66.js"
+  "/all_about_friends_the_series/precache-manifest.23040b6e7f80518cce0418d3a61b4c72.js"
 );
 
 self.addEventListener('message', (event) => {
