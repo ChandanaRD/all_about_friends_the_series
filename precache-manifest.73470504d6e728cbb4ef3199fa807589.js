@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "918f4d92b5e41d57d3c955973b89f7bc",
+    "revision": "f53a62e7159487343bceceed86cd4546",
     "url": "/all_about_friends_the_series/index.html"
   },
   {
-    "revision": "cd7dbcd275ceae0f77d8",
-    "url": "/all_about_friends_the_series/static/css/main.daedafae.chunk.css"
+    "revision": "99f1dafa0dc81aa59cd5",
+    "url": "/all_about_friends_the_series/static/css/main.593739c4.chunk.css"
   },
   {
     "revision": "0bb4cfc44c5ecac7cf8e",
     "url": "/all_about_friends_the_series/static/js/2.a08c5ae9.chunk.js"
   },
   {
-    "revision": "cd7dbcd275ceae0f77d8",
-    "url": "/all_about_friends_the_series/static/js/main.8cab5636.chunk.js"
+    "revision": "99f1dafa0dc81aa59cd5",
+    "url": "/all_about_friends_the_series/static/js/main.1e17f152.chunk.js"
   },
   {
     "revision": "60fa3036a8897e20cd95",
