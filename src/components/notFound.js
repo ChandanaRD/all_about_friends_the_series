@@ -9,7 +9,7 @@ function Notfound() {
             </h1>
         <h2 className="center">
             <code>
-                <Link to="/">Click here</Link> to nagivate back to home :)
+                <Link to="/" className="default-link">Click here</Link> to nagivate back to home :)
             </code>
         </h2>
     </div>);
