@@ -23,6 +23,7 @@ class displayCharacter extends React.Component {
                 left: '0 px',
                 top: '0 px'
             }
+        }
 
         console.log("this.props.match.params.character" + this.props.match.params.character);
 
