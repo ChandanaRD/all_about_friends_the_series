@@ -1,6 +1,9 @@
 import React from "react";
 import "../styles/choose-fav-character.scss";
+
 import { Link } from "react-router-dom";
+
+
 
 class chooseFavCharacter extends React.Component {
     constructor(props) {
@@ -9,6 +12,7 @@ class chooseFavCharacter extends React.Component {
             character: "phoebe"
         };
     }
+
     characters = [
         "MonicaGeller", "RossGeller", "RachelGreen", "JoeyTribbiani", "PhoebeBuffay", "ChandlerBing"
     ];

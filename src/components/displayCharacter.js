@@ -1,6 +1,8 @@
 import React from 'react';
 import "../styles/display.scss";
+
 import { Link } from "react-router-dom";
+
 // import "../styles/common.scss";
 // import ReactDom from "react-dom";
 // import * as serviceWorker from '../serviceworker';
@@ -13,13 +15,15 @@ class displayCharacter extends React.Component {
 
         this.state = {
             character: this.props.match.params.character,
+
             isComponentVisible: false,
+
             componentPosition:
             {
                 left: '0 px',
                 top: '0 px'
             }
-        }
+
         console.log("this.props.match.params.character" + this.props.match.params.character);
 
         this.getPosition = this.getPosition.bind(this);
@@ -35,38 +39,46 @@ class displayCharacter extends React.Component {
             "I'm always the host!",
             "I know I know I know!"
         ],
+
         "RossGeller": [
+
             "missisipi 1, missisipi 2 ...",
             "we were on a break!",
             "unagi!",
             "keynote speaker",
             "hey! that's my burger!"
         ],
+
         "RachelGreen": [
             "Monica, will you stop calling it a 'flower'?"
         ],
         "JoeyTribbiani": [
+
             "how you doing?",
             "Joey doesn't share food!",
             "soap opera",
             "i'm your best friend!"
         ],
         "PhoebeBuffay": [
+
             "smelly cat, smelly cat! what are the feeding you?",
             "meet Mr.Rob",
             "uh-huh uh-huh",
             "ross, i don't buy ur words",
             "Janet is your lobster, chandler! "
         ],
+
         "ChandlerBing": [
             "Mr. bing!"
         ]
     }
     // "you go girl!", "how You doing?", "chandelior", "Mr. bing!", "My lobster!"};
+
     // componentPosition = {
     //     left: this.props.positionx,
     //     right: this.props.positiony
     // }
+
     getPosition(e) {
         this.setState({
             isComponentVisible: true,
@@ -82,6 +94,7 @@ class displayCharacter extends React.Component {
         if(!this.state.isComponentVisible){
             return "Click anywhere on screen!";
         }
+
         var randomIndex = Math.floor(Math.random() * this.randomMsgArray[this.state.character].length);
         console.log(randomIndex);
         return this.randomMsgArray[this.state.character][randomIndex];
@@ -148,6 +161,7 @@ class displayCharacter extends React.Component {
                 </Link>
             </footer>
         </div>
+
 
         )
     }
