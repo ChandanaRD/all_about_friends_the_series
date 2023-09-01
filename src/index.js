@@ -15,7 +15,7 @@ const componentRouter = (
           <Route exact path="/" component={mainPage} />
         <Route path="/chooseFavCharacter" component={chooseFavCharacter} />
         <Route path="/displayCharacter:character" component={displayCharacter} />
-        <Route component={NotFound} />
+        <Route component={mainPage} />
           </Switch>
         
       </div>
