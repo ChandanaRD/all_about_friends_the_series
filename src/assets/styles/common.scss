@@ -3,6 +3,14 @@
     src: URL('ShadowsIntoLight-Regular.ttf') format('truetype');
 }
 
+$component-font : #282c34;
+$purple: #6d5495;
+$purple-light: 0.5rem solid rgb(109 84 149 / 47%);
+$yellow: #fff851;
+$yellow-light: #f0dbb1;
+$yellow-dark: #f1bf5d;
+$black-shadow: #1e1d1d;
+
 h1, h2, h3, h4, h5, h6{
     font-family: freehand;
 }
@@ -26,35 +34,13 @@ code {
     margin : 5px;
 }
 
-
-.displayHeader{
-    p{
-        font-weight: 500;
-        font-size: 20px;
-    }
-}
-
-.displayFooter, .displayHeader{
-    height:50px;
-    background-color: adjust-hue($color: #425a86, $degrees: 0);
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    font-weight: 300;
-    font-size: 15px;
-    p{
-        padding: 5px;
-        margin: 5px;
-    }
-
-}
-
 a{
-    color: white;
+    color: $yellow;
 }
 
 a:hover{
-    color: white;
+    color: $yellow-light;
     text-decoration: underline;
+    text-decoration-color: $yellow-light;
 }
 

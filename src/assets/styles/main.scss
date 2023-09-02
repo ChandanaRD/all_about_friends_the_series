@@ -1,5 +1,4 @@
 @import "common.scss";
-$component-font : #282c34;
 
 .App {
   text-align: center;
@@ -15,13 +14,13 @@ $component-font : #282c34;
 
 .App-header {
   min-height: 100vh;
-  color: white;
-  background-color: black;
+  color: $yellow-light;
+  background-color: $purple;
 
 }
 
-.App-link {
-  color: #61dafb;
+.App-link:hover {
+  color: $yellow;
 }
 
 @keyframes App-logo-spin {
@@ -40,10 +39,10 @@ $component-font : #282c34;
 .show{
   width: 200px;
   height: auto;
-  background-color: white;
-  color: $component-font;
+  background-color: $purple;
+  color: $yellow;
   padding: 5px;
-  border: 5px solid #445f8c;
+  border: 5px solid $yellow-dark;
   border-radius: 10px;
   position: absolute;
   left: calc(50% - 100px);
@@ -54,12 +53,35 @@ $component-font : #282c34;
   display: none;
 }
 
+
+.displayHeader{
+  p{
+      font-weight: 500;
+      font-size: 20px;
+  }
+}
+
+.displayFooter, .displayHeader{
+  height:50px;
+  background-color: $purple;
+  color: $yellow;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 300;
+  font-size: 15px;
+  p{
+      padding: 5px;
+      margin: 5px;
+  }
+
+}
+
 .characterWrapper{
   align-items: center;
   display: flex;
   justify-content: center;
   min-height: 90vh;
-  background-color: white;
+  background-color: $purple;
 
   &-all{
     top: calc(50% - 200px);
@@ -82,9 +104,9 @@ $component-font : #282c34;
       }
       .characterImage{
         margin-bottom: 20px;
-        border: 0.5rem solid #445f8c;
-        box-shadow: 0px 5px 6px #ccc;
-        border-radius: 50%;
+        border: 0.5rem solid $yellow-dark;
+        box-shadow: 0px 5px 6px $black-shadow;
+        border-radius: 30%;
 
           &-all{
             width: 160px;
@@ -96,11 +118,11 @@ $component-font : #282c34;
       }
 
       .characterImage-all:hover {
-          border: 0.5rem solid rgb(88 114 162 / 47%);
+          border: 0.5rem solid $yellow-light
       }
       .characterText{
           padding: 5px;
-          color: black;
+          color: $yellow;
           font-weight: 400;
           text-align: center;
           font-size: 18px;

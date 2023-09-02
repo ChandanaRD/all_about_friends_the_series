@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/images/Friends-logo-wallpaper.jpg';
+import logo from '../assets/images/friends-transperent.png';
 import '../assets/styles/main.scss';
 import { Link } from 'react-router-dom'
 import DisplayCharacter from './displayCharacter';
