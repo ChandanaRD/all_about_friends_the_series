@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/all_about_friends_the_series/static/css/main.891362ad.css",
-    "main.js": "/all_about_friends_the_series/static/js/main.c7074b85.js",
+    "main.css": "/all_about_friends_the_series/static/css/main.88967d2a.css",
+    "main.js": "/all_about_friends_the_series/static/js/main.63ae9575.js",
     "static/media/MonicaGeller.jpg": "/all_about_friends_the_series/static/media/MonicaGeller.336a8256ffc3e1ad8c39.jpg",
     "static/media/JoeyTribbiani.jpg": "/all_about_friends_the_series/static/media/JoeyTribbiani.9b5ac9c8856bbd38406e.jpg",
     "static/media/Friends-logo-wallpaper.jpg": "/all_about_friends_the_series/static/media/Friends-logo-wallpaper.8d8b23635b13d18dad2c.jpg",
+    "static/media/ShadowsIntoLight-Regular.ttf": "/all_about_friends_the_series/static/media/ShadowsIntoLight-Regular.e8c09384ff0643bf385d.ttf",
     "static/media/RossGeller.jpg": "/all_about_friends_the_series/static/media/RossGeller.40deb3adbcb3b8aa7108.jpg",
     "static/media/ChandlerBing.jpg": "/all_about_friends_the_series/static/media/ChandlerBing.5aec15bd185cdcfa8862.jpg",
     "static/media/PhoebeBuffay.jpg": "/all_about_friends_the_series/static/media/PhoebeBuffay.c191880458759f1aa7e6.jpg",
     "static/media/RachelGreen.jpg": "/all_about_friends_the_series/static/media/RachelGreen.46b54d443c7af2b91e7d.jpg",
     "index.html": "/all_about_friends_the_series/index.html",
-    "main.891362ad.css.map": "/all_about_friends_the_series/static/css/main.891362ad.css.map",
-    "main.c7074b85.js.map": "/all_about_friends_the_series/static/js/main.c7074b85.js.map"
+    "main.88967d2a.css.map": "/all_about_friends_the_series/static/css/main.88967d2a.css.map",
+    "main.63ae9575.js.map": "/all_about_friends_the_series/static/js/main.63ae9575.js.map"
   },
   "entrypoints": [
-    "static/css/main.891362ad.css",
-    "static/js/main.c7074b85.js"
+    "static/css/main.88967d2a.css",
+    "static/js/main.63ae9575.js"
   ]
 }
