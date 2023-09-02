@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../images/Friends-logo-wallpaper.jpg';
-import '../styles/App.scss';
+import logo from '../assets/images/Friends-logo-wallpaper.jpg';
+import '../assets/styles/main.scss';
 import { Link } from 'react-router-dom'
 import DisplayCharacter from './displayCharacter';
 
@@ -44,7 +44,6 @@ class mainPage extends React.Component {
               choose your favorite character!
           </h2>
           </Link>
-          {/* {this.showRandomComponent(this.state.x, this.state.y)} */}
         </header>
       </div>
     );

@@ -1,4 +1,4 @@
-![FRIENDS-preview!](./src/assets/preview.png "Preview of the application - FRIENDS")
+![FRIENDS-preview!](./src/assets/images/preview.png "Preview of the application - FRIENDS")
 
 ## Who hasn't watched FRIENDS?
 

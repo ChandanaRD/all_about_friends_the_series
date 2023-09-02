@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import '../styles/common.scss'
+import '../styles/main.scss'
 
 function Notfound() {
     return (<div>

@@ -30,8 +30,10 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://ChandanaRD.github.io/all_about_friends_the_series/",
+  "homepage": "https://ChandanaRD.github.io/all_about_friends_the_series",
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "gh-pages": "^6.0.0",
     "react-scripts": "^5.0.1",
     "sass": "^1.66.1"
   }
